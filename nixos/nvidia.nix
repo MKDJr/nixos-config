@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inptus, config, lib, pkgs, ... }:
 {
 
   # Enable OpenGL
