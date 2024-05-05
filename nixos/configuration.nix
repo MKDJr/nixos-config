@@ -39,7 +39,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "GandalfV2"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -115,6 +115,19 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  
+  programs.steam.enable = true;
+  programs.steam.remotePlay.openFirewall = true;
+  
+  programs.git.enable = true;
+  
+  programs._1password.enable = true;
+  programs._1password-gui.enable = true;
+  
+  programs.fish.enable = true;
+  
+  services.syncthing.enable = true;
+  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -124,6 +137,17 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    thunderbird
+    zotero_7
+    obsidian
+    mixxx
+    vscode
+    alacritty
+    gparted
+    rustup
+    prusa-slicer
+    calibre
+    pandoc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
